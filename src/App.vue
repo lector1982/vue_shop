@@ -1,26 +1,27 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="bg-slate-300 dark:bg-black">
+		<h1 class="text-center py-5 text-4xl mb-3 dark:text-white font-lobster">{{ title }}</h1>
+		<catalog-wrapper />
+	</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import CatalogWrapper from '@/components/CatalogWrapper'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+		CatalogWrapper
+  },
+	data() {
+		return {
+			title: 'Catalog Shop'
+		}
+	}
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
